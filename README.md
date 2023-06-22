@@ -1,2 +1,2 @@
-# TX-Core
+# TX-Legacy
 Custom FiveM Framework
