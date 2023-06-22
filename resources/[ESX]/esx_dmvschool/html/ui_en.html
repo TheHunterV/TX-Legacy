@@ -1,0 +1,119 @@
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+	<div class="full-screen">
+		<div class="question-container">
+			<!-- header -->
+			<div class="header">
+				<h1>Auto Ecole</h1>
+			</div>
+			<!-- home -->
+			<div class="body home">
+				<div class="content">
+					<!-- ICI BREVE PRESENTATION -->
+					<center>
+						<img src="dmv.png" class="logo">
+						<br>
+						<p class="bold-text">Bienvenue à l'école de conduite.
+					</center>
+					<br>
+					<center>Tous les citoyens de Los Santos doivent réussir leur examen avant de pouvoir conduire.
+						<br>Prenez votre temps, répondez avec du bon sens et ne répondez pas au hasard.
+						<br>
+						<br> Examen théorique
+						<br> - L'examen théorique coûte 200 $, ce montant n'est pas remboursé en cas d'échec à l'examen.
+						<br> - Ne vous inquiétez pas, l'école de conduite accepte les cartes de crédit, mais faites attention à ne pas vous endetter.
+						<br> - Si vous échouez à votre examen la première fois, vous ne pourrez pas le repasser immédiatement, vous devrez le passer à une date ultérieure.
+						<br>
+						<br> Examen de conduite
+						<br> - L'examen de conduite coûte 500 $, comme l'examen théorique, ce paiement ne sera pas remboursé en cas d'échec.
+						<br> - Assurez-vous de rester attentif pendant la conduite et d'éviter les accidents !</p>
+					</center>
+				</div>
+				<div class="buttonspot">
+					<a href="#" class="button btnQuestion">Commencer</a>
+				</div>
+				<div class="barre-progression">
+					<h2>Avancement</h2>
+					<progress class="progression" value="0" max="10">
+				</div>
+			</div>
+			<!-- Question-->
+			<div class="body questionnaire-container">
+				<div class="content">
+					<h2 id="questionNumero"></h2>
+					<p id="question"></p>
+					<form class="form" id="question-form">
+						<div>
+							<input type="radio" name="question" id="answerA" value="A">
+							<label class="answerA"></label>
+						</div>
+						<div>
+							<input type="radio" name="question" id="answerB" value="B">
+							<label class="answerB"></label>
+						</div>
+						<div>
+							<input type="radio" name="question" id="answerC" value="C">
+							<label class="answerC"></label>
+						</div>
+						<div>
+							<input type="radio" name="question" id="answerD" value="D">
+							<label class="answerD"></label>
+						</div>
+						<button type="submit" id="submit" class="submit">Question suivante</button>
+					</form>
+				</div>
+				<div class="barre-progression">
+					<h2>Avancement</h2>
+					<progress class="progression" value="0" max="10">
+				</div>
+			</div>
+			<!-- Results -->
+			<div class="body resultGood">
+				<div class="content">
+					<center>
+						<<p class="bold-text">Bon travail !</p>
+						<br>
+						<br>Vous avez bien réussi à l'examen.
+						<br>
+						<br>Vous pouvez fermer cette fenêtre et passer à votre/vos test(s) de conduite.
+					</center>
+				</div>
+				<div class="buttonspot">
+					<a href="#" class="button btnClose">Fermer</a>
+				</div>
+				<div class="barre-progression">
+					<h2>Avancement</h2>
+					<progress class="progression" value="10" max="10">
+				</div>
+			</div>
+			<div class="body resultBad">
+				<div class="content">
+					<center>
+						<p class="bold-text">Vous avez échoué</p>
+						<br>
+						<br>Vous n'étiez pas prêt pour ce test, essayez à nouveau plus tard... 
+						<br>
+						<br>
+					</center>
+				</div>
+				<div class="buttonspot">
+					<a href="#" class="button btnKick">Fermer</a>
+				</div>
+				<div class="barre-progression">
+					<h2>Avancement</h2>
+					<progress class="progression" value="10" max="10">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="questions.js" type="text/javascript"></script>
+	<script src="scripts.js" type="text/javascript"></script>
+	<script src="debounce.min.js" type="text/javascript"></script>
+
+</body>
