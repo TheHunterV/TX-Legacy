@@ -1,0 +1,234 @@
+body {
+	font-family: 'Poppins', sans-serif;
+	overflow: hidden;
+	display: none;
+	background-image: url('https://i.imgur.com/9NN9YMa.png');
+	background-size: cover;
+	user-select: none;
+}
+
+.logotext {
+	text-align: center;
+	font-weight: 700;
+	line-height: 1.3vw;
+	color: #ffffff;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	top: 2%;
+	left: 50%;
+	transform: translate(-50%);
+	letter-spacing: 2px;
+}
+
+#logoline1 {
+	position: absolute;
+	left: 105%;
+	margin-top: 1.1vw;
+	background-color: #ffffff;
+	width: 3vw;
+	height: 0.1vw;
+}
+
+#logoline2 {
+	position: absolute;
+	right: 105%;
+	margin-top: 1.1vw;
+	background-color: #303030;
+	width: 3vw;
+	height: 0.1vw;
+}
+
+.dialog {
+	width: 332px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto; 
+	top: 21%;
+	padding: 20px;
+	left: 20%;
+	transform: translate(-50%);
+	margin:5px;
+	margin-bottom:20px;
+	color: #ffffff;
+}
+
+#line {
+	position: absolute;
+	left: 15px;
+	margin-top: 0.9vw;
+	background-color: #ff1900;
+	width: 5px;
+	height: 1.65vw;
+}
+
+.welcometxt {
+	font-family: 'Poppins', sans-serif;
+	font-size: 2.3vw;
+	text-align: left;
+	padding: 5px;
+	margin-bottom: -10px;
+	letter-spacing: 2px;
+	white-space: nowrap;
+}
+
+.welcomesubtxt {
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.9vw;
+	text-align: left;
+	color: #aaaaaa;
+	padding: 5px;
+	margin-bottom: 20px;
+	letter-spacing: 2px;
+	width: 40vw;
+}
+
+input {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	margin-bottom: 15px;
+	opacity: 0.5;
+	border: none;
+	border: 1px solid #2d2d2d;
+	width: 100%;
+	outline: none;
+	padding: 10px;
+	color: #888888;
+	padding-left: 25px;
+	text-align:left;
+	border-radius: 5px;
+	background-color: #121212;
+}
+
+input:focus {
+	border: 1px solid #797979;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #6b6b6b;
+	opacity: 1; /* Firefox */
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.radio-toolbar input[type="radio"] {
+	opacity: 0;
+	position: absolute;
+	width: 36%;
+}
+
+.radio-toolbar label {
+	display: inline-block;
+	margin-top: 5px;
+	margin-right: 10px;
+    margin-left: 10px;
+	border: 1px solid #2d2d2d7a;
+    background-color: #12121285;
+    padding: 8px 18px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	color: #6b6b6b;
+	border-radius: 5px;
+	width: 25%;
+	letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+	width: 25%;
+    background-color: rgb(246, 45, 45);
+	border: 1px solid rgb(246, 45, 45);
+    border-radius: 5px;
+    color: #f3f3f3;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.radio-toolbar input[type="radio"]:focus + label {
+	width: 25%;
+    background-color: rgb(246, 45, 45);
+	border: 1px solid rgb(246, 45, 45);
+    border-radius: 5px;
+    color: #f3f3f3;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.radio-toolbar label:hover {
+    background-color: rgb(246, 45, 45);
+	transition: 0.3s;
+	width: 25%;
+	color: #f3f3f3;
+	border: 1px solid rgb(246, 45, 45);
+	letter-spacing: 1px;
+    font-weight: 400;
+	cursor: pointer;
+}
+
+button {
+	font-family: 'Poppins', sans-serif;
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	border: 1px solid #2d2d2d7a;
+    background-color: #12121285;
+	border-radius: 5px;
+	outline: none;
+	color: #6b6b6b;
+	padding: 10px;
+	width: 60%;
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+button:hover {
+	border: 1px solid rgb(246, 45, 45);
+    background-color: rgb(246, 45, 45);
+	color: #f3f3f3;
+	transition: 0.3s;
+	cursor:pointer;
+}
+
+h1 {
+	display: block;
+	margin-top: 5px;
+	margin-right: 5px;
+	padding: 10px;
+	background-color: rgba(15,15,15,0.9);
+	color: #ffffff;
+	width: 93%;
+	text-align: center;
+}
+
+.range-wrap {
+	position: relative;
+	margin: 0 auto 3rem;
+}
+
+.range {
+	width: 100%;
+}
+
+.bubble {
+	background: rgba(15,15,15,0.9);
+	color: #ffffff;
+	padding: 4px 12px;
+	position: absolute;
+	border-radius: 4px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+
+.bubble::after {
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: rgba(15,15,15,0.9);
+	color: black;
+	top: -1px;
+	left: 50%;
+}

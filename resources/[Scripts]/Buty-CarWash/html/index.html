@@ -1,0 +1,97 @@
+<html>
+	<head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js" type="text/javascript"></script>
+                <link rel="stylesheet" href="style.css">
+                <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+                
+                <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </head>
+	<body>
+                <div id="app" v-show="display">
+                        <div class="overlay"></div>
+
+                        <div class="container">
+                                <div class="title">
+                                   <img src="./img/icon.png" alt="" />
+                                   CAR
+                                   <span>WASH</span>
+                                </div>
+                                <div class="slider">
+                                   <div class="controller">
+                                      <div class="arrows">
+                                         <div class="arrow left" onclick="onLeftClick()">
+                                            <ion-icon name="chevron-back-outline"></ion-icon>
+                                         </div>
+                                         <div class="arrow right" onclick="onRightClick()">
+                                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                                         </div>
+                                      </div>
+                                      <div class="button" @click="select()">
+                                        PAYER <span>SERVICE</span>
+                                         <img src="./img/vector1.png" alt="" class="vector1" />
+                                         <img src="./img/vector2.png" alt="" class="vector2" />
+                                      </div>
+                                   </div>
+                                   <div class="slider-inner">
+                                      <div class="package" data-value="1">
+                                         <img src="./img/basic.png" alt="" class="bg" />
+                                         <img src="./img/vector3.png" alt="" class="vector3" />
+                                         <img src="./img/vector4.png" alt="" class="vector4" />
+                                         <div class="wave"></div>
+                                         <div class="title">- BASIC -</div>
+                                         <div class="price">PRIX: <span>1000$</span></div>
+                                         <div class="package-description">
+                                            <span>BASIC</span>
+                                            Tu n'as pas beaucoup d'argent, n'est-ce pas ? Eh bien, nous allons simplement nettoyer un peu la carrosserie avec l'eau qui reste sur le sol. Nous n'utiliserons aucun produit et nous ne ferons pas beaucoup d'efforts pour frotter.
+                                         </div>
+                                         <div class="package-percentage">50%</div>
+                                      </div>
+                                      <div class="package active" data-value="2">
+                                         <img src="./img/premium.png" alt="" class="bg" />
+                                         <img src="./img/vector3.png" alt="" class="vector3" />
+                                         <img src="./img/vector4.png" alt="" class="vector4" />
+                                         <div class="wave"></div>
+                                         <div class="title">- STANDARD -</div>
+                                         <div class="price">PRIX: <span>2000$</span></div>
+                                         <div class="package-description">
+                                            <span>STANDARD</span>
+                                            Si vous souhaitez que votre voiture soit propre sans dépenser trop d'argent, voici le forfait qu'il vous faut. Seul un nettoyage général sera effectué, sans rien approfondir. Ce sera plus ou moins acceptable.
+                                         </div>
+                                         <div class="package-percentage">75%</div>
+                                      </div>
+                                      <div class="package" data-value="3">
+                                         <img src="./img/standard.png" alt="" class="bg" />
+                                         <img src="./img/vector3.png" alt="" class="vector3" />
+                                         <img src="./img/vector4.png" alt="" class="vector4" />
+                                         <div class="wave"></div>
+                                         <div class="title">- PREMIUM -</div>
+                                         <div class="price">PRIX: <span>3500$</span></div>
+                                         <div class="package-description">
+                                            <span>PREMIUM</span>
+                                            Avez-vous beaucoup de saleté dans votre véhicule ? Ce Pack Premium est parfait pour vous. Un nettoyage complet, lavage à la main, lavage des roues, lavage intérieur et polissage des phares. Avec des produits de la meilleure qualité.
+                                         </div>
+                                         <div class="package-percentage">100%</div>
+                                      </div>
+                                   </div>
+                                </div>
+                                <div class="footer">
+                                   <div class="top">
+                                      <div class="left">
+                                         <span class="percentage">100%</span> PROPRE
+                                      </div>
+                                      <div class="title">INFORMATION</div>
+                                   </div>
+                                   <div class="description"></div>
+                                </div>
+                             </div>
+                </div>
+
+
+                <script src="script.js" defer></script>
+	</body>
+</html>

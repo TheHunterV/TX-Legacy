@@ -1,0 +1,15 @@
+{
+    "job_centre": "Parler avec Txpac",
+    "job_offers": "Offres d'emploi",
+    "licenses": "Acheter vos Papiers",
+    "talking_job": "Parle avec Txpac ...",
+    "hired": "Vous avez été embauché(e).",
+    "unemployed": "Vous avez perdu votre emploi.",
+    "price": "Prix : %s$",
+    "talking_license": "Achat de licence...",
+    "license_success": "Licence achetée avec succès.",
+    "permission_denied": "Vous n'êtes pas autorisé(e) à acheter cette licence.",
+    "not_enough_money": "Pas assez d'argent.",
+    "name": "Nom",
+    "dateofbirth": "Date de naissance"
+    }
