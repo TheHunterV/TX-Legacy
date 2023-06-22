@@ -1,0 +1,194 @@
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <style>
+			 #depositUI, #withdrawUI, #transferUI, #general, #topbar, #waiting
+			 {display: none;}
+		</style>
+	</head>
+    <body>
+    	<div class="container">
+    		<div class="cont-content" id="general">
+    			<div class="flex">
+    				<div class="balance box-shadow">
+						<img class="visa-card" src="https://media.discordapp.net/attachments/980812253337120788/983841572527415416/kindpng_16404.png">
+						<span class="name">4325 8436 8923 2315</span>
+						<span class="name">07/2026</span>
+						<span class="name2">184</span>
+		    		</div>
+					<div class="balance cash">
+						<img class="cashimg" src="https://media.discordapp.net/attachments/980812253337120788/983875677034008606/credit-card.png">
+						<span class="name3">Banque :</span>
+						<span class="money"><span class="curbalance"></span><span class="dollars"> $</span></span>
+		    		</div>
+					<div class="balance cash2">
+						<img class="cashimg" src="https://media.discordapp.net/attachments/980812253337120788/983879878275383326/money.png">
+						<span class="name3">Liquide :</span>
+						<span class="money"><span class="curbalance2"></span><span class="dollars">$</span></span>
+		    		</div>
+					<button id="deposit">
+						<img class="deposit" src="https://cdn.discordapp.com/attachments/980812253337120788/983839946215395388/telecharger1.png">
+						<title2 class = "deposittext">Déposer</title2>
+					</button>
+					<button id="withdraw">
+						<img class="withdraw" src="https://media.discordapp.net/attachments/980812253337120788/983840242849169479/retirer.png">
+						<title2 class = "deposittext">Retirer</title2>
+					</button>
+					<button id="transfer">
+						<img class="transfer" src="https://media.discordapp.net/attachments/980812253337120788/983846741893865502/transfere.png">
+						<title2 class = "deposittext">Transférer</title2>
+					</button>
+    			</div>
+	    	</div>
+	    	<div class="cont-content" id="depositUI">
+    			<div class="flex">
+    				<button class="btn btn-grey back">
+						<img class="withdraw" src="https://media.discordapp.net/attachments/980812253337120788/983892555961880626/marque-de-croix.png">
+						<title2 class = "deposittext">Retour</title2>
+    				</button>
+    			</div>
+    			<form id="deposit1">
+    				<div class="input-cont box-shadow">
+						<title2 class = "textdeposit">Combien souhaitez vous deposer ?</title2>
+    					<input id="amount" class="numberbg" type="number" placeholder="0 $">
+    				</div>
+    				<button class="btn btn-green" type="submit">
+						<img class="withdraw" src="https://media.discordapp.net/attachments/980812253337120788/983892556221931600/jaccepte.png">
+						<title2 class = "deposittext">Valider</title2>
+    				</button>
+				</form>
+	    	</div>
+	    	<div class="cont-content" id="withdrawUI">
+    			<div class="flex">
+    				<button class="btn btn-grey back">
+						<img class="withdraw" src="https://media.discordapp.net/attachments/980812253337120788/983892555961880626/marque-de-croix.png">
+						<title2 class = "deposittext">Retour</title2>
+    				</button>
+    			</div>
+    			<form id="withdraw1">
+    				<div class="input-cont box-shadow">
+						<title2 class = "textdeposit">Combien souhaitez vous retirer ?</title2>
+    					<input id="amountw" class="numberbg" type="number" placeholder="0 $">
+    				</div>
+    				<button class="btn btn-green" type="submit">
+						<img class="withdraw" src="https://media.discordapp.net/attachments/980812253337120788/983892556221931600/jaccepte.png">
+						<title2 class = "deposittext">Valider</title2>
+    				</button>
+				</form>
+	    	</div>
+	    	<div class="cont-content" id="transferUI">
+    			<div class="flex">
+    				<button class="btn btn-grey back">
+						<img class="withdraw" src="https://media.discordapp.net/attachments/980812253337120788/983892555961880626/marque-de-croix.png">
+						<title2 class = "deposittext">Retour</title2>
+    				</button>
+    			</div>
+    			<form id="transfer1">
+    				<div class="double-input">
+    					<div class="virement1">
+							<title2 class = "textdeposit">Combien souhaitez vous donner ?</title2>
+	    					<input id="amountt" class="numberbg" type="number" placeholder="0 $">
+	    				</div>
+	    				<div class="virement2">
+							<title2 class = "textdeposit">A qui souhaitez vous faire le virement ?</title2>
+	    					<input id="to" type="text" class="numberbg" placeholder="ID">
+	    				</div>
+    				</div>
+    				<button class="btn btn-green" type="submit">
+						<img class="withdraw" src="https://media.discordapp.net/attachments/980812253337120788/983892556221931600/jaccepte.png">
+						<title2 class = "deposittext">Valider</title2>
+    				</button>
+				</form>
+	    	</div>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    	<script type="text/javascript">
+    		$(function() {
+				window.addEventListener('message', function(event) {
+					if (event.data.type === "openGeneral"){
+		                $('#general').show();
+					} else if(event.data.type === "balanceHUD") {
+							$('.username1').html(event.data.player);
+							$('.curbalance').html(event.data.balance);
+							$('.curbalance2').html(event.data.balance2);
+					} else if (event.data.type === "closeAll"){
+		                $('#waiting, #general, #transferUI, #withdrawUI, #depositUI, #topbar').hide();
+					}
+					else if (event.data.type === "result") {
+						if (event.data.t == "success")
+							$("#result").attr('class', 'alert-green');
+						else
+							$("#result").attr('class', 'alert-orange');
+						$("#result").html(event.data.m).show().delay(5000).fadeOut();
+					}
+				});
+			});
+    		$('.btn-sign-out').click(function(){
+	            $('#general, #waiting, #transferUI, #withdrawUI, #depositUI, #topbar').hide();
+	            $.post('http://banking/NUIFocusOff', JSON.stringify({}));
+	        })
+	        $('.back').click(function(){
+	            $('#depositUI, #withdrawUI, #transferUI').hide();
+	            $('#general').show();
+	        })
+	        $('#deposit').click(function(){
+	            $('#general').hide();
+	            $('#depositUI').show();
+	        })
+	        $('#withdraw').click(function(){
+	            $('#general').hide();
+	            $('#withdrawUI').show();
+	        })
+	        $('#transfer').click(function(){
+	            $('#general').hide();
+	            $('#transferUI').show();
+	        })
+	        $('#fingerprint-content').click(function(){
+	            $('.fingerprint-active, .fingerprint-bar').addClass("active")
+	            setTimeout(function(){
+		  		$('#general').css('display', 'block')
+					$('#topbar').css('display', 'flex')
+					$('#waiting').css('display', 'none')
+					$('.fingerprint-active, .fingerprint-bar').removeClass("active")
+				}, 1400);
+	        })
+	        $("#deposit1").submit(function(e) {
+		        e.preventDefault(); // Prevent form from submitting
+		        $.post('http://banking/deposit', JSON.stringify({
+		            amount: $("#amount").val()
+		        }));
+				$('#depositUI').hide();
+				$('#general').show();
+				$("#amount").val('');
+			});
+			$("#transfer1").submit(function(e) {
+		        e.preventDefault(); // Prevent form from submitting
+		        $.post('http://banking/transfer', JSON.stringify({
+					to: $("#to").val(),
+		            amountt: $("#amountt").val()
+		        }));
+				$('#transferUI').hide();
+				$('#general').show();
+				$("#amountt").val('');
+			});
+			$("#withdraw1").submit(function(e) {
+				e.preventDefault(); // Prevent form from submitting
+		        $.post('http://banking/withdrawl', JSON.stringify({
+		            amountw: $("#amountw").val()
+		        }));
+				$('#withdrawUI').hide();
+				$('#general').show();
+				$("#amountw").val('');
+			});
+			document.onkeyup = function(data){
+		        if (data.which == 27){
+		            $('#general, #waiting, #transferUI, #withdrawUI, #depositUI, #topbar').hide();
+		            $.post('http://banking/NUIFocusOff', JSON.stringify({}));
+		        }
+		    }
+    	</script>
+    </body>
+  </html>
